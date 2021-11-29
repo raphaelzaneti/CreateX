@@ -1,0 +1,105 @@
+@use './var';
+
+.courses{
+
+    &__title{
+
+        padding-left: 2rem;
+
+        h1{
+            font-size: 2.2rem;
+            font-weight: bolder;
+            padding-top: 0.6rem;
+            padding-bottom: 0.6rem;
+        }
+
+        h4{
+            font-size: 0.6rem;
+            font-weight: bold;
+        }
+
+        &-button{
+            border-color: var.$main-btn-color;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            &:hover{
+                background-color: var.$main-btn-color;   
+                border-color: var.$main-btn-color;
+            }
+
+            &:active{
+                background-color: var.$main-btn-color;   
+                border-color: var.$main-btn-color;
+                box-shadow: var.$main-btn-color;
+            }
+
+            &:not(:disabled):not(.disabled):active{
+                background-color: var.$main-btn-color;   
+                border-color: var.$main-btn-color;
+            }
+        }
+
+    }
+    &__carousel{
+        &-item{
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+
+            padding: 1rem 0.6rem;
+
+            box-shadow: 0.2rem 0.4rem rgba($color: #888, $alpha: 0.1);
+
+            img{
+                margin-bottom: 1rem;
+            }
+            
+        }
+
+        &-item--course{
+            margin-top: 0.6rem;
+            font-size: 1.6rem;
+            font-weight: bold;
+            
+        }
+    
+        &-item--description{
+            padding-top: 0.8rem;
+            
+        }
+
+        &-item--price{
+            color: #FF4242;
+        }
+
+        &-item--author{
+            color: #787A80;
+            
+        }
+
+        &-item--badge{
+            display: inline-block;
+            width: 40%;
+            color: #fff;
+            padding-top: 0.4rem;
+            padding-bottom: 0.4rem;
+        }
+
+        &-item--badge-mkt{
+            background-color: #03CEA4;
+        }
+
+        &-item--badge-hr{
+            background-color: #F89828;
+        }
+
+        &-item--badge-manag{
+            background-color: #5A87FC;
+        }
+
+        &-item--badge-design{
+            background-color: #F52F6E;
+        }
+
+
+    }
+}

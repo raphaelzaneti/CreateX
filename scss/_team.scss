@@ -1,0 +1,88 @@
+@use './var';
+
+.team{
+
+    background-color: #F4F5F6;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    &__title{
+        h1{
+            font-size: 2.2rem;
+            font-weight: bolder;
+        }
+        
+        h2{
+            font-size: 0.6rem;
+            font-weight: bold;
+        }
+    }
+
+    &__carousel{
+        margin-top: 2rem;
+        margin-left: 1rem;
+
+        &-item{
+            margin-bottom: 0.6rem;
+        }
+
+        &-item--name{
+            display: inline-block;
+            width: 100%;
+
+            font-size: 1.6rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        &-item--job{
+            display: inline-block;
+            width: 100%;
+
+            color: var.$secondary-text-color;
+            text-align: center;
+        }
+    }
+
+    &__half-moon-vector{
+        position: absolute;
+        transform: translateY(-1.6rem) translateX(-0.4rem);
+        opacity: 0.6;
+        
+        img{
+            
+            transform: rotate(135deg);
+            width: 2rem;
+            height: 2rem;
+        }
+
+    }
+
+    &__dots-vector{
+        position: absolute;
+        
+        transform: translateX(13rem) translateY(-2rem);
+        
+
+        img{
+            width: 50%;
+            height: 50%;
+        }
+
+    }
+
+    &__L-shapes-vector{
+        position: absolute;
+        
+        top: 730%;
+        left: 90%;
+        
+
+        img{
+            width: 50%;
+            height: 50%;
+        }
+
+    }
+
+}

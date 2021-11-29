@@ -1,0 +1,14 @@
+@use './var';
+
+.illustration{
+    background-color: var.$main-background-color;
+    width: 100%;
+    height: 30rem;
+
+    img{
+        height: 100%;
+        width: 100%;
+    }
+    
+
+}

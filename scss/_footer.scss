@@ -1,0 +1,150 @@
+@use './var';
+
+.footer{
+    background-color: #1e212c;
+
+    color: var.$secondary-text-color;
+
+    padding-bottom: 0.4rem;
+    padding-top: 2rem;
+
+    &__createx-area{
+        display: inline-block;
+
+
+        h1{
+            color: #fff;
+
+            font-size: 1.8rem;
+            font-weight: bolder;
+        }
+    }
+
+    &__createx-area--text{
+        padding-top: 0.4rem;
+        line-height: 1.2rem;
+    }
+
+    &__social-medias{
+        padding: 1.4rem 1rem;
+        margin-bottom: 2rem;
+
+        height: 2rem;
+
+        button{
+            background-color: transparent;
+            border-color: transparent;
+            opacity: 0.5;
+    
+            &:hover, &:active{
+                opacity: 1;
+            }
+        }
+
+    }
+
+    &__routes{
+
+        &-content{
+
+            margin-top: 2rem;
+            text-align: center;
+
+            h2{
+                color: #fff;
+                font-size: 1.2rem;
+                font-weight: bold;
+                padding-bottom: 0.6rem;
+            }
+            
+            li, p{
+                padding-top: 0.4rem;
+                padding-bottom: 0.4rem;
+            }
+
+            img{
+                transform: translateY(0.2rem);
+                padding-right: 0.2rem;
+            }
+        }
+    }
+
+    &__newsletter{
+        
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+
+        
+        h2{
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding-bottom: 1.6rem;
+        }
+
+        &-input{
+            background-color: (rgba($color: #fff, $alpha: 0.1));
+            border: none;
+            border-color: transparent;
+
+            color: #fff;
+
+            &:focus{
+                background-color: (rgba($color: #fff, $alpha: 0.1));
+                border: none;
+                border-radius: 0.4rem;
+
+                border-color: transparent;
+                box-shadow: rgba($color: #fff, $alpha: 0.4) 0px 0px 0px 3.2px;
+            }
+            
+            &-area{
+                border-color: (rgba($color: #fff, $alpha: 0.5));
+                
+            }
+        }
+
+        &-button{
+            background-color: (rgba($color: #fff, $alpha: 0.1));
+            
+            border: none;
+            border-color: transparent;
+
+            color: #fff;
+
+            &:hover, &:active{
+                background-color: (rgba($color: #fff, $alpha: 0.1));
+                border: none;
+                border-radius: 0.4rem;
+
+                border-color: transparent;
+                box-shadow: rgba($color: #fff, $alpha: 0.4) 0px 0px 0px 3.2px;
+            }
+        }
+    }
+
+    &__copyright{
+
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
+        background-color: rgba($color: #fff, $alpha: 0.05);
+
+        color: #fff;
+        font-size: 0.6rem;
+        text-align: center;
+
+        img{
+            height: 0.6rem;
+            transform: translateY(0.1rem);
+        }
+
+        &-go-top{
+            font-size: 1rem;
+            color: var.$secondary-text-color;
+            font-weight: bold;
+
+            margin-top: 1.2rem;
+        }
+    }
+}

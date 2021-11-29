@@ -1,0 +1,96 @@
+.benefits{
+    
+    &__title{
+
+        padding-left: 2rem;
+
+        h1{
+            font-size: 2.2rem;
+            font-weight: bolder;
+        }
+        
+        h4{
+            font-size: 0.6rem;
+            font-weight: bold;
+            margin-bottom: 0.4rem;
+        }
+    }
+        
+    &__icons{
+
+        margin-left: 0.2rem;
+        margin-bottom: 2rem;
+
+        span{
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 1rem;
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+    }
+    
+    &__icons--highlighted{
+        font-weight: bolder;
+
+        padding-top: 0.6rem;
+        padding-bottom: 0.6rem;
+
+        border-color: var.$main-btn-color;
+        
+        transform: translateY(1.4rem);
+
+        &:hover{
+            background-color: var.$main-btn-color;   
+            border-color: var.$main-btn-color;
+        }
+
+        &:active{
+            background-color: var.$main-btn-color;   
+            border-color: var.$main-btn-color;
+            box-shadow: var.$main-btn-color;
+        }
+
+        &:not(:disabled):not(.disabled):active{
+            background-color: var.$main-btn-color;   
+            border-color: var.$main-btn-color;
+        }
+        
+        img{
+            transform: translateY(0.2rem);
+            margin-right: 0.2rem;
+        }
+    }
+    
+    &__icons--normal{
+        padding-top: 1rem;
+        transform: translateY(1rem);
+
+        img{
+            transform: translateY(0.2rem);
+            margin-right: 0.2rem;
+        }
+    }
+
+    &__text{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
+        h3{
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 0.8rem;
+        }
+
+        p{
+            padding-left: 0.6rem;
+            line-height: 1.4rem;
+        }
+    }
+
+    &__illustration{
+        height: 100%;
+    }
+}

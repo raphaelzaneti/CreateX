@@ -1,0 +1,26 @@
+@use './var';
+
+@import './header';
+
+@import './call-courses';
+@import './illustration';
+@import './statistic';
+@import './about.scss';
+@import './courses';
+@import './benefits';
+@import './events';
+@import './certificate';
+@import './team';
+@import './testemonials';
+@import './blog';
+@import './subscribe';
+@import './footer';
+
+body{
+    width: 100%;
+}
+
+.inactive{
+    display: none;
+}
+

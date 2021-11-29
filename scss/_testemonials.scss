@@ -1,0 +1,101 @@
+@use './var';
+
+.testemonials{
+    background-color: #F4F5F6;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    &__title{
+        h1{
+            font-size: 2.2rem;
+            font-weight: bolder;
+        }
+        
+        h2{
+            font-size: 0.6rem;
+            font-weight: bold;
+        }
+    }
+
+    &__carousel{
+        
+        margin-top: 2rem;
+
+        &-item{
+            padding: 1rem 2rem;
+            background-color: #fff;
+            border-radius: 1rem;
+        }
+
+        &-item--text{
+            line-height: 1.2rem;
+        }
+
+        &-item-user{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            margin-top: 1rem;
+        }
+
+        &-item--picture{
+            
+        }
+
+        &-item--student{
+            display: flex;
+            flex-direction: column;
+
+            padding-top: 0.6rem;
+        }
+
+        &-item--name{
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        &-item--position{
+            color: var.$secondary-text-color;
+        }
+
+    }
+
+    &__circles-vector{
+        position: absolute;
+        opacity: 0.3;
+
+        transform: translateY(-1.2rem) translateX(-1rem);
+
+        width: 4rem;
+        height: 4rem;
+    }
+
+    &__3-half-moon-vector{
+        position: absolute;
+
+        transform: translateX(10rem);
+
+        width: 2rem;
+        height: 2rem;
+
+    }
+
+    &__dots-vector{
+        position: absolute;
+
+        transform: translateX(-0.4rem);
+
+        width: 4rem;
+        height: 4rem;
+    }
+
+    &__circles-vector-2{
+        position: absolute;
+
+        transform: translateX(15rem) translateY(-2rem) rotate(270deg);
+
+        width: 4rem;
+        height: 4rem;
+    }
+}

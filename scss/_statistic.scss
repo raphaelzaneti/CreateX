@@ -1,0 +1,81 @@
+@use './var';
+
+.statistic{
+    background-color: var.$main-background-color;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 18rem;
+
+    &__text{
+        text-align: center;
+        display: inline-block;
+
+        font-size: 1.6rem;
+        padding-top: 0.6rem;
+        padding-bottom: 1.4rem;
+        margin-bottom: 0;
+
+        background-image: url(../assets/Ellipse.svg);
+        background-repeat: no-repeat;
+        background-size: 2%;
+        background-position: center bottom;
+    }
+
+    &__text--last{
+        background-image: none;
+    }
+
+    &__vector--dots{
+        position: absolute;
+
+        height: 20%;
+        width: 20%;
+
+        top: 150%;
+        right: 20%;
+
+        img{
+            opacity: 0.3;
+            height: 100%;
+        }
+    }
+
+    &__vector--half-moon{
+        position: absolute;
+        
+        height: 5%;
+        width: 5%;
+
+        top: 140%;
+        left: 10%;
+
+        img{
+            opacity: 0.3;
+            height: 100%;
+            width: 100%;
+
+            transform: rotate(135deg);
+        }
+    }
+
+    &__vector--circles{
+        position: absolute;
+        
+        height: 20%;
+        width: 20%;
+
+        top: 175%;
+        left: 0%;
+
+        img{
+            opacity: 0.8;
+            height: 100%;
+            width: 100%;
+
+            //transform: rotate(135deg);
+        }
+    }
+}
