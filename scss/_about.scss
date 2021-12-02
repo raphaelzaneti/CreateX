@@ -7,17 +7,18 @@
     &__text{
         padding-top: 1.8rem;
         padding-left: 2rem;
-    }
 
-    &__title{
-        font-size: 1.4rem;
-        font-weight: bold;
-        padding-bottom: 0.6rem;
-    }
+        h1{
+            font-size: var.$main-title-size;
+            font-weight: bolder;
+        }
 
-    &__subtitle{
-        font-size: 2.6rem;
-        font-weight: bolder;
+        h2{
+            font-size: var.$main-subtitle-size;
+            font-weight: bold;
+            padding-bottom: 0.6rem;
+        }
+    
     }
 
     &__list{
@@ -33,6 +34,8 @@
     &__button{
         background-color: var.$main-btn-color;
         border-color: var.$main-btn-color;
+        font-weight: bold;
+
         margin-top: 2rem;
         margin-bottom: 2rem;
             &:hover{
@@ -56,7 +59,7 @@
         position: absolute;
         
         height: 30%;
-        top: 220%;
+        top: 72rem;
         left: 0%;
         transform: rotate(-45deg);
     
@@ -71,8 +74,8 @@
         position: absolute;
         
         height: 30%;
-        top: 260%;
-        right: 0%;
+        top: 100rem;
+        right: 0;
         transform: rotate(-45deg);
     
         img{
@@ -80,5 +83,78 @@
             height: 100%;
             transform: rotate(45deg);
         }
+    }
+}
+
+@media(min-width:360px){
+    .about__text{
+        h1{
+            font-size: calc(1.2*var.$main-title-size);
+        }
+
+        h2{
+            font-size: calc(1.5*var.$main-subtitle-size);
+        }
+    }
+}
+
+@media(min-width: 601px){
+    .about{
+        margin-bottom: 2rem;
+    }
+    
+    .about__dots{
+        top: 116rem;
+    }
+
+    .about__o-vector{
+        top: 125rem;
+    }
+
+    .about__list{
+        li{
+            line-height: 1.6rem;
+        }
+    }
+
+    .about__button{
+        padding: 1rem 2rem;
+        
+    }
+}
+
+@media(min-width: 961px){
+    .about__content{
+        display: flex;
+    }
+    
+    .about__image{
+        width: 70%;
+    }
+
+    .about__text{
+        padding-top: 0;
+    }
+
+    .about__button{
+        padding-top: 1rem;
+    }
+}
+
+@media(min-width:1920px){
+    .about{
+        padding: 10rem 15rem
+    }
+}
+
+
+@media(min-height: 601px){
+    .about__dots{
+        top: auto;
+    }
+
+    .about__o-vector {
+        top: auto;
+        transform: translateY(18rem) rotate(-45deg);;
     }
 }

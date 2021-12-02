@@ -13,7 +13,7 @@
         text-align: center;
         display: inline-block;
 
-        font-size: 1.6rem;
+        font-size: 1.2rem;
         padding-top: 0.6rem;
         padding-bottom: 1.4rem;
         margin-bottom: 0;
@@ -22,6 +22,21 @@
         background-repeat: no-repeat;
         background-size: 2%;
         background-position: center bottom;
+
+        strong{
+            font-weight: bolder;
+            font-size: 1.6rem;
+        }
+
+        span{
+            display: inline-block;
+            transform: translateY(-0.1rem);
+            margin-left: 0.4rem;
+        }
+
+        &-dot img{
+            display: none;
+        }
     }
 
     &__text--last{
@@ -34,8 +49,8 @@
         height: 20%;
         width: 20%;
 
-        top: 150%;
-        right: 20%;
+        top: 48rem;
+        left: 11rem;
 
         img{
             opacity: 0.3;
@@ -49,8 +64,8 @@
         height: 5%;
         width: 5%;
 
-        top: 140%;
-        left: 10%;
+        top: 53rem;
+        left: 3rem;
 
         img{
             opacity: 0.3;
@@ -67,15 +82,166 @@
         height: 20%;
         width: 20%;
 
-        top: 175%;
+        top: 68rem;
         left: 0%;
 
         img{
             opacity: 0.8;
             height: 100%;
             width: 100%;
-
-            //transform: rotate(135deg);
         }
+    }
+}
+
+@media(min-width: 375px){
+    .statistic__vector--dots{
+        top: 53rem;
+    }
+
+    .statistic__vector--half-moon{
+        top: 55rem;
+    }
+}
+
+@media(min-width: 601px){
+    .statistic{
+        height: auto;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .statistic__vector--dots{
+        left: auto;
+        top: 66rem;
+        right: 8rem;
+    }
+
+    .statistic__vector--half-moon{
+        top: 66rem;
+    }
+
+    .statistic__vector--circles{
+        top: 81rem;
+    }
+
+    .statistic__text{
+        font-size: 1.6rem;
+        padding-bottom: 1.6rem;
+        padding-top: 1rem;
+        strong{
+            font-weight: bolder;
+            font-size: 2rem;
+        }
+
+        span{
+            transform: translateY(-0.2rem);
+        }
+    }
+}
+
+@media(min-width: 768px){
+    .statistic__vector--circles{
+        top: auto;
+        transform: translateY(11rem);
+    }
+}
+
+
+@media(min-width: 800px){
+    .statistic__vector--circles{
+        top: auto;
+        transform: translateY(9rem);
+    }
+}
+
+@media(min-width: 962px){
+    .statistic__text{
+        padding-bottom: 2rem;
+    }
+
+}
+
+@media(min-width: 1280px){
+    .statistic{
+        flex-direction: row;
+        justify-content: space-between;
+
+        &__text{
+            padding-bottom: 0;
+            background-image: none;
+            text-align: left;
+            font-size: 1.2rem;
+            
+            strong{
+                font-size: 1.4rem;
+            }
+
+            span &-dot{
+                display: inline-block;
+                height: 3%;
+                width: 3%;
+
+                margin-left: 4rem;
+
+                img{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media(max-height: 601px){
+    .statistic__vector--circles{
+        top: auto;
+        transform: translateY(18rem);
+    }
+
+    .statistic__vector--half-moon{
+        top: auto;
+        transform: translateY(-3rem) translateX(20rem);
+    }
+
+    .statistic__vector--dots{
+        top: auto;
+        transform: translateY(15rem);
+        right: 3rem;
+    }
+}
+
+@media(max-height: 667px){
+    .statistic__vector--circles {
+        transform: translateY(18.6rem);
+    }
+}
+
+@media(max-height: 768px){
+    .statistic__vector--dots{
+        top: 38rem;
+        right: 0;
+    }
+
+    .statistic__vector--half-moon{
+        top: 40rem;
+        left: 25rem;    
+    }
+}
+
+@media(max-height: 900px){
+
+    .statistic{
+        padding-top: 8rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    .statistic__vector--dots{
+        height: 15%;
+        width: 15%;
+
+        top: 38rem;
+        right: 0;
     }
 }

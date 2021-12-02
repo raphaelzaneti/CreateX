@@ -69,13 +69,33 @@ function elementGenerator(el, id){
 
 function slickGenerator(){
     $('.team__carousel').slick({
-      autoplay: true,
-      infinite: true,
-      arrows: true,
-      autoplaySpeed: 500,
-      dots: true,
+        //autoplay: true,
+        infinite: true,
+        arrows: true,
+        autoplaySpeed: 500,
+        dots: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+
+        responsive: [
+            {
+            breakpoint: 1280,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
+                }
+            }
+        ],
+        
+      
       //prevArrow: '<button type="button" class="test btn"></button>,'
     });
+
+    $('.slick-dots').addClass("position-static")
+    $('.team__carousel-item').addClass("slick-item-adjust")
+    $('.slick-next').addClass('slick-next-arrow-adjust')
   }
 
 getDB()

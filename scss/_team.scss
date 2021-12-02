@@ -7,13 +7,16 @@
     padding-bottom: 2rem;
 
     &__title{
+
+        padding-left: 2rem;
+
         h1{
-            font-size: 2.2rem;
+            font-size: var.$main-title-size;
             font-weight: bolder;
         }
-        
+
         h2{
-            font-size: 0.6rem;
+            font-size: var.$main-subtitle-size;
             font-weight: bold;
         }
     }
@@ -74,9 +77,8 @@
     &__L-shapes-vector{
         position: absolute;
         
-        top: 730%;
-        left: 90%;
-        
+        top: 431rem;
+        left: 16rem;        
 
         img{
             width: 50%;
@@ -85,4 +87,94 @@
 
     }
 
+}
+
+
+@media(min-width:360px){
+    .team__title{
+        h1{
+            font-size: calc(1.2*var.$main-title-size);
+        }
+
+        h2{
+            font-size: calc(1.5*var.$main-subtitle-size);
+            padding-bottom: 0.4rem;
+        }
+    }
+
+    .team__carousel-item--name{
+        padding-top: 1rem;
+        padding-bottom: 0.4rem;
+    }
+}
+
+@media(min-width: 601px){
+    .team__dots-vector{
+        transform: translateX(24rem);
+        
+        img{
+            width: auto;
+            height: auto;
+        }
+    }
+
+    .team__L-shapes-vector{
+        left: auto;
+        top: auto;
+        right: 1rem;
+        transform: translateY(35rem);
+    }
+}
+
+@media(min-width: 768px){
+    .team__carousel-item{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .team__dots-vector{
+        transform: translateX(32rem);
+    }
+
+    .team__L-shapes-vector{
+        transform: translateY(40rem);
+    }
+}
+
+@media(min-width: 962px){
+    .team{
+        padding-top: 4rem;
+
+
+        &__carousel-item{
+            display: flex;
+            flex-direction: column;
+
+            padding-left: 2rem;
+            padding-right: 2rem;
+
+        }
+    }
+}
+
+@media(min-width: 1240px){
+    .team{
+        padding-top: 8rem;
+    }
+}
+
+@media(min-width: 1440px){
+    .team__half-moon-vector{
+        transform: translateY(-3.6rem) translateX(6rem);
+    }
+
+    .team__dots-vector {
+        transform: translateX(62rem) translateY(-6rem);
+    }
+}
+
+@media(min-width: 1920px){
+    .team__dots-vector {
+        transform: translateX(56rem) translateY(-6rem);
+    }
 }

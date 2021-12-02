@@ -31,11 +31,7 @@ function createCoursesCards(array){
         
         drawCard(id)
         addImage(e.img[0], 'course-'+id)
-        addCourse(e.courseName, 'course-'+id)
-        addCourseDescription(e.description, 'course-'+id)
-        addCourseData(id)
-        addCoursePrice(e.price, 'course-'+id)
-        addAuthorName(e.name, 'course-'+id)
+        addContent(e, 'course-'+id)
     })
 }
 
@@ -50,17 +46,40 @@ function drawCard(id){
 
 function addImage(imgObj, id){
     let card = document.getElementById(id)
-
+    const div = document.createElement('div')
     const img = document.createElement('img')
+
+    div.classList.add('courses__carousel-image')
+
     img.classList.add('img-fluid')
     img.src = imgObj.url
     img.alt = imgObj.title
-    card.appendChild(img)
+
+    div.appendChild(img)
+    card.appendChild(div)
 }
 
+function addContent(e, id){
+        const div = document.createElement('div')
+        div.id = id+'-content'
+        div.classList.add('courses__carousel-item--content')
+        
+        let card = document.getElementById(id)
+
+        card.appendChild(div)
+        
+        addCourse(e.courseName, div.id)
+        addCourseDescription(e.description, div.id)
+        addCourseData(div.id)
+        addCoursePrice(e.price, div.id)
+        addAuthorName(e.name, div.id)
+        
+        
+    }
+    
 function addCourse(course, id){
     let card = document.getElementById(id)
-
+        
     const span = document.createElement('span')
     span.innerText = course
     switch(course){
@@ -79,6 +98,7 @@ function addCourse(course, id){
     }
     span.classList.add('badge')
     span.classList.add('courses__carousel-item--badge')
+
     card.appendChild(span)
 }
 
@@ -93,15 +113,15 @@ function addCourseDescription(course, id){
 
 function addCourseData(id){
     const div = document.createElement('div')
-    let card = document.getElementById('course-'+id)
-    div.id = 'course-'+id+'-description'
+    let card = document.getElementById(id)
+    div.id = id+'-description'
     div.classList.add('courses__carousel-item--description')
     card.appendChild(div)
 }
 
 function addCoursePrice(price, id){
     let description = document.getElementById(id+'-description')
-
+    
     const span = document.createElement('span')
     span.innerText = "$ "+price
     span.classList.add('courses__carousel-item--price')

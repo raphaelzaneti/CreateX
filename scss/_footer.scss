@@ -60,6 +60,10 @@
             li, p{
                 padding-top: 0.4rem;
                 padding-bottom: 0.4rem;
+
+                &:hover, &:active{
+                    color: #fff;
+                }
             }
 
             img{
@@ -100,7 +104,6 @@
             
             &-area{
                 border-color: (rgba($color: #fff, $alpha: 0.5));
-                
             }
         }
 
@@ -146,5 +149,105 @@
 
             margin-top: 1.2rem;
         }
+    }
+}
+
+@media(min-width:360px){
+    .footer__newsletter{
+        h2{
+            text-align: center;
+        }
+    }
+
+    .footer__newsletter-input-area{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media(min-width: 601px){
+    .footer__routes{
+        display: grid;
+        grid-template-areas: 
+            "map courses"
+            "contact news"
+        ;
+
+        padding-left: 2rem;
+    }
+
+    .footer__newsletter{
+        p{
+            padding-left: 5rem;
+        }
+    }
+
+    .footer__newsletter-input-area{
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    
+}
+
+@media(min-width: 962px){
+
+    .footer__routes{
+        grid-template-columns: 0.8fr 1fr;
+    }
+
+    .footer__newsletter-input-area{
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    .footer__newsletter p{
+        padding-right: 3rem;
+    }
+
+    .footer__copyright{
+        font-size: 0.8rem;
+    }
+}
+
+@media(min-width: 1280px){
+
+    .footer{
+        grid-template-areas: "logo routes" "copyright copyright";
+        grid-template-columns: 1fr 1fr;
+
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    .footer__createx-area{
+        margin-top: 2rem;
+    }
+
+    .footer__routes{
+        grid-template-areas: "map courses contact news";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding-bottom: 2rem;;
+    }
+
+    .footer__newsletter p{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .footer__newsletter-input-area{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .footer__copyright{
+        grid-area: copyright;
+    }
+
+}
+
+@media(min-width: 1440px){
+    .footer{
+        display: grid;
+        grid-template-columns: 0.3fr 1fr;
     }
 }
