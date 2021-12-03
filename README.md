@@ -62,7 +62,7 @@ Courses no desktop (width = 1440px)
 ## Print Extra: pensa na raiva
 O brasileiro não tem um dia de paz. Durante a redação do readme, depois de fechar o projeto, cruzo com essa maravilha no mobile:
 
-[bug que me deu raiva](https://drive.google.com/uc?export=view&id=1aVRyg89CGMDzPZJ1MHSHygTGiZRKNswf)
+![bug que me deu raiva](https://drive.google.com/uc?export=view&id=1aVRyg89CGMDzPZJ1MHSHygTGiZRKNswf)
 
 Uma das imagens do JSON tinha height maior que as demais, o que deixava a renderização desalinhada em carrosséis de 3 elementos (width > 1280). Para resolver esse problema, delimitei o tamanho das imagens na classe CSS, mas aí surgiu um novo problema: os textos ficavam desalinhados com relação às imagens (não centralizados). Para isso, era preciso aplicar um display flex, o que só foi possível aplicando o estilo inline via jQuery (aparentemente, algumas classes do slick têm !important).
 
