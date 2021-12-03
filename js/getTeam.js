@@ -1,4 +1,5 @@
 
+
 const carouselDiv = document.getElementById('team-carousel')
 const firstItemDiv = document.getElementById('team-item-1')
 
@@ -69,13 +70,16 @@ function elementGenerator(el, id){
 
 function slickGenerator(){
     $('.team__carousel').slick({
-        //autoplay: true,
+        autoplay: true,
         infinite: true,
         arrows: true,
         autoplaySpeed: 500,
         dots: true,
         slidesToShow: 3,
         slidesToScroll: 3,
+
+        prevArrow: $('.team__carousel-arrows-prev'),
+        nextArrow: $('.team__carousel-arrows-next'),
 
         responsive: [
             {
@@ -88,14 +92,17 @@ function slickGenerator(){
                 }
             }
         ],
-        
-      
-      //prevArrow: '<button type="button" class="test btn"></button>,'
     });
 
     $('.slick-dots').addClass("position-static")
     $('.team__carousel-item').addClass("slick-item-adjust")
-    $('.slick-next').addClass('slick-next-arrow-adjust')
+    
+    $(document).load($(window).bind("resize", ()=>{
+        if(window.matchMedia('(min-width: 1280px)').matches){
+            $('.team__carousel-item').removeAttr("style")
+            $('.team__carousel-item').css("display", "flex")
+        }
+    }))
   }
 
 getDB()

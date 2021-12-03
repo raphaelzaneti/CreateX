@@ -25,8 +25,8 @@ function getCourses(data){
 }
 
 function createCoursesCards(array){
-
-    let card = array.map(e => {
+    
+    array.map(e => {
         let id = e.id+"-"+e.courseName
         
         drawCard(id)

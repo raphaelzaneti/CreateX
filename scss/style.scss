@@ -14,6 +14,7 @@
 @import './blog';
 @import './subscribe';
 @import './footer';
+@import './cookies';
 
 html, body, main, footer, section{
     width: 100%;
@@ -23,8 +24,12 @@ html, body, main, footer, section{
     position: static;
 }
 
+.slick-prev-arrow-adjust{
+    transform: translateY(-2rem);;
+}
+
 .slick-next-arrow-adjust{
-    transform: translateX(-0.1rem);
+    transform: translateX(-2rem) translateY(-2rem);;
 }
 
 .slick-item-adjust{
@@ -70,5 +75,11 @@ html, body, main, footer, section{
     .slick-item-adjust{
         padding-left: 2rem;
         padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1536px){
+    .slick-item-adjust{
+        display: flex;
     }
 }

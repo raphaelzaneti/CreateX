@@ -1,7 +1,7 @@
 @use "./var";
 
 .events{
-    background-color: var.$main-background-color;
+    background: var.$main-background-gradient;
 
     &__title{
         

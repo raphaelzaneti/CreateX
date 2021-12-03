@@ -6,7 +6,8 @@
 
     padding: 1rem;
     
-    background-color: #fdceb3;
+    //background-color: #fdceb3;
+    background: var.$main-background-gradient;
 
     display: block;
 
@@ -53,6 +54,30 @@
 
     &__item{
         font-weight: bold;
+
+        &-home{
+            font-weight: bold;
+        }
+
+        &-consultation{
+            background-color: transparent;
+            border: none;
+            padding: 0;
+            text-align: left;
+            font-weight: bold;
+            font-size: inherit;
+            line-height: inherit;
+
+            &:hover, &:active{
+                background-color: transparent;
+                border-color: transparent;
+            }
+
+            &:not(:disabled):not(.disabled):active{
+                background-color: transparent;   
+                border-color: transparent;
+            }
+        }
     }
 }
 
@@ -185,6 +210,9 @@
 
 @media(min-width: 1280px){
     .header__navbar{
+
+        background-color: transparent;
+
         max-width: 1280px;       
 
         display: grid;
@@ -226,6 +254,11 @@
         border-color: #FF3F3A;
         padding-left: 1rem;
         padding-right: 1rem;       
+        padding-top: .25rem;
+        padding-bottom: .25rem;
+        font-size: .875rem;
+        line-height: 1.5;
+        text-align: center;
 
         margin-right: 1.6rem;
     }

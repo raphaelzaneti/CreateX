@@ -196,6 +196,12 @@
         margin-left: 5rem;
         margin-right: 5rem;
     }
+
+    .testemonials__dots-vector{
+        width: 6rem;
+        height: 6rem;
+        transform: translateX(3rem) translateY(-3rem);
+    }
 }
 
 @media(min-width: 1280px){
@@ -206,6 +212,12 @@
     .testemonials__carousel-item{
         margin-left: 10rem;
         margin-right: 10rem;
+    }
+
+    .testemonials__dots-vector{
+        width: 8rem;
+        height: 8rem;
+        transform: translateX(7.6rem) translateY(-6rem);
     }
 }
 
